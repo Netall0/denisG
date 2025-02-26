@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:profff/auth/widget/home_screen.dart';
+import 'package:profff/home/widget/home_screen.dart';
 import 'package:profff/auth/widget/log_in_widget.dart';
+import 'package:profff/splash/widget/splash_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class AuthGuard extends StatelessWidget {
@@ -18,7 +19,7 @@ class AuthGuard extends StatelessWidget {
         }
         final session = snapshot.hasData ? snapshot.data!.session : null;
         if (session != null) {
-          return const HomeScreen();
+          return const SplashScreen();
         }
         return const LogInWidget();
       },

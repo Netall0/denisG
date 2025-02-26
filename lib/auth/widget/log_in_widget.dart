@@ -18,15 +18,16 @@ class _LogInWidgetState extends State<LogInWidget> {
   final _passwordController = TextEditingController();
 
   void signIn() async {
-    try {} on Object catch (e) {
+    try {
+      await supabaseService.signInWithEmail(
+          _emailController.text.trim(), _passwordController.text.trim());
+    } on Object catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(e.toString()),)
-        );
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(e.toString()),
+        ));
       }
     }
-    await supabaseService.signInWithEmail(
-        _emailController.text.trim(), _passwordController.text.trim());
   }
 
   @override

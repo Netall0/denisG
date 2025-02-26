@@ -36,6 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.0.17
   supabase_flutter: ^2.8.3
+  smooth_page_indicator: ^1.2.1
+  flutter_floating_bottom_bar: ^1.2.1+1
+
+
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +67,9 @@ flutter:
   assets:
     - assets/Eye-Open.svg
     - assets/Union.svg
+    - assets/nike_zoom.svg
+    - assets/nike_zoom.png
+    - assets/Path.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
